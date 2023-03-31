@@ -1,0 +1,33 @@
+.container{
+    display: grid; 
+    border: 1px solid black;
+    width: 550px;
+    height: 550px;
+    grid-template-rows: repeat(16,2fr); 
+    grid-template-columns: repeat(16,2fr);
+    
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+}
+
+.square{
+    background-color: white;
+    border: 1px solid black;
+}
+
+.color{
+    background-color: grey;
+    border:1px solid black;
+}
+.controls{
+    width: 200px;
+    height: 550px;
+    background: chartreuse;
+    margin-right: 50px;
+    border: 1px solid black;
+}
+
