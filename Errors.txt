@@ -1,0 +1,14 @@
+Errors encountered
+
+3. Created a button  called clear, that i was not seeing adde to the controls div. Solution use querySelector, and dont forget to include the correct name with a period before it(.)
+
+4. How to save the data entered by the user, use a keydown event 
+
+5. Logic Error, page becomes stuck, not able to update the amount of squares(Solution: to fix this perfomance issue 
+I moved the changeBackground function from inside of the for loop of the upDaateGird function to outside of the for loop. 
+This showed a significant perfomance increase. changeBackground function being run each time on each of the squares, and adding
+to the fact that, the changeBackground funtion also has a loop of itself, we can see how this significantly decreased the perfomance of the program).
+
+
+6. How to add downloaded fonts. 
+To add do

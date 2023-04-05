@@ -17,6 +17,7 @@
 }
 body{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 1000px;
@@ -32,14 +33,53 @@ body{
     border:1px solid black;
 }
 .controls{
+    display: flex;
+    flex-direction: column;
     width: 200px;
     height: 550px;
     background: chartreuse;
     margin-right: 50px;
     border: 1px solid black;
+    border-radius: 5px;
+}
+.userInput{
+    margin-top: 10%;
 }
 
 .clear{
-    
+    background-color: #007bff;
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  }
+  .clear:hover{
+      background-color: goldenrod;
+      box-shadow:  0px 4px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+
+.main-container{
+    display: flex;
+}
+body{
+    background:plum;
 }
 
+@font-face {
+    font-family: "myFont";
+    src: url(fonts/Rubik_Pixels/RubikPixels-Regular.ttf);
+}
+
+h1{
+    font-family: "myFont",sans-serif;
+}
+.random{
+    margin-top: 10%;
+}
+.random:hover{
+    background: skyblue;
+}

@@ -77,4 +77,24 @@ clear_button.addEventListener("click",function(){
     })
 })
 
+//Random color function
+function randomColor(){
+    const squares = document.querySelectorAll(".square");
+    squares.forEach(function(square){ // 
+        square.addEventListener("mouseover", function(event){
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+            event.target.style.background = "#" + randomColor;
+        });
+    });
+}
+
+//Create Random color button
+const randomButton = document.createElement("button");
+controls.appendChild(randomButton);
+randomButton.classList.add("random");
+randomButton.textContent = "Random";
+randomButton.addEventListener("click",function(){
+    randomColor();
+});
+
 
