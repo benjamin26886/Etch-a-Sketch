@@ -14,7 +14,7 @@ function createGrid(){
         changeBackground(square);
     }
 }
-function changeBackground(square){
+function changeBackground(){
     const squares = document.querySelectorAll('div.square'); // Select all divs with the class name of square
     squares.forEach(function(square){ // 
         square.addEventListener("mouseover", function(event){
@@ -27,17 +27,20 @@ function changeBackground(square){
 function upDateGrid(){
     let number_of_cells = getUserInput();
     const upDatedContainer = document.querySelector('div.container');
-    upDatedContainer.innerHTML = "";
+    upDatedContainer.innerHTML = ""; // this clears the container
 
     for(let i = 0; i < number_of_cells * number_of_cells; i++){ //logic error 
         const squares = document.createElement('div');
         upDatedContainer.appendChild(squares);
         squares.classList.add('square'); // after the default class is added to the newly added squares
-        changeBackground(); // add the changeBackground class so that when the newly added squares are in the container the can change the background color
+      /*  changeBackground(); */ // add the changeBackground class so that when the newly added squares are in the container the can change the background color
     }
     upDatedContainer.style.gridTemplateRows = `repeat(${number_of_cells},2fr)`; // Replace the defualt value of the rows with user value
     upDatedContainer.style.gridTemplateColumns = `repeat(${number_of_cells},2fr)`; // Replace the default value of the columns with the user value 
+    changeBackground(); //Moving the 
+    
 }
+
 
 
 //Gets the users Input
@@ -58,7 +61,7 @@ let user_input = document.createElement('input'); //UserInput field created
 user_input.classList.add('userInput');
 controls.appendChild(user_input); //append userInput to controls container 
 user_input.addEventListener('keydown',function(event){ //When the keydown Event occurs
-    if(event.key === "Enter"){ // the keydown event is enter 
+    if(event.key === "Enter"){ // specify the keydown event is enter 
         event.preventDefault(); // prevent form submisson 
         inputData = user_input.value; // save the data entered into the field in this variable, which is global, at the top of the file 
         console.log(inputData);
